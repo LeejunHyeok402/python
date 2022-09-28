@@ -4,8 +4,3 @@ def addminmuldiv(a,b):
 sum = addminmuldiv(4,6)
 
 print("sum",sum)
-
-
-
-
-
