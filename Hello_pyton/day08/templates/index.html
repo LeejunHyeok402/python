@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h3>str: {{ str }}</h3>
+    {% for i in arr:%}
+    <h3>arr: {{i}}</h3>
+    {% endfor%}
+    <br>
+    <h3>db아님</h3>
+    {% for i in emps %}
+    e_id: {{i.e_id}}
+    e_name: {{i.e_name}}
+    sex: {{i.sex}}
+    addr: {{i.addr}}<br>
+     {% endfor%}
+     <h3>db임</h3>
+     <table border="1">
+     <tr><th>e_id</th><th>e_name</th><th>sex</th><th>addr</th></tr>
+    {% for i in emps_indb %}
+    <tr>
+    <td>
+    {{i.e_id}}
+    </td>
+    <td>
+   	{{i.e_name}}
+    </td>
+    <td>
+    {{i.sex}}
+    </td>
+    <td>
+    {{i.addr}}
+    </td>
+    </tr>
+     {% endfor%}
+     </table>
+</body>
+</html>

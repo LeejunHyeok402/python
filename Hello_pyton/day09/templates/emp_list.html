@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Item Details</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+	EMP_LIST
+     <table border="1">
+     <tr><th>e_id</th><th>e_name</th><th>sex</th><th>addr</th></tr>
+    {% for i in emps %}
+    <tr>
+    <td>{{i.e_id}}</td>
+    <td>{{i.e_name}}</td>
+    <td>{{i.sex}}</td>
+    <td>{{i.addr}}</td>
+    </tr>
+     {% endfor%}
+     </table>
+</body>
+</html>
